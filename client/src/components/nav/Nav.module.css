@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 13rem;
+  margin-top: -3rem;
+  margin-left: 2rem;
+}
+
+.sidebar {
+  margin-top: 1.7rem;
+  margin-right: 2rem;
+}
+
+.login {
+  background-color: white;
+  border: 0;
+  font-weight: bold;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.login:hover {
+  background-color: wheat;
+  border-radius: 4px;
+}
+
+.signup {
+  background-color: white;
+  border: 0;
+  font-weight: bold;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.signup:hover {
+  background-color: wheat;
+  border-radius: 4px;
+}

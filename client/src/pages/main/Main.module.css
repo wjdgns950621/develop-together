@@ -1,0 +1,5 @@
+.introduce {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5rem;
+}

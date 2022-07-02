@@ -23,7 +23,7 @@
 }
 
 .login:hover {
-  background-color: wheat;
+  background-color: #f4ffff;
   border-radius: 4px;
 }
 
@@ -36,6 +36,6 @@
 }
 
 .signup:hover {
-  background-color: wheat;
+  background-color: #f4ffff;
   border-radius: 4px;
 }

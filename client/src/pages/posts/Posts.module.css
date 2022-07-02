@@ -1,0 +1,26 @@
+.logo {
+  height: 20rem;
+  display: block;
+  margin: 0px auto;
+  margin-top: -5rem;
+}
+
+.make__post {
+  display: block;
+  margin: auto;
+  position: relative;
+  margin-top: -6rem;
+  width: 20%;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #f4ffff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.line {
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 2rem;
+  position: relative;
+}

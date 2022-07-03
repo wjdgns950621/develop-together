@@ -14,12 +14,12 @@ const dummyDatas = [
     {
         id:shortid(),
         username: '박xx',
-        content: 'react 반응형 웹 같이 공부하실 프론트분들 연락주세요~',
+        content: 'react 반응형 웹 같이 공부해서 만들어보실 프론트분들 연락주세요~',
     },
     {
         id:shortid(),
         username: '최xx',
-        content: 'typescript로 4주 프로젝트 같이 할 멤버 보집합니다.',
+        content: 'typescript로 4주동안 간단한 쇼핑몰 만들기 프로젝트 같이 할 멤버 보집합니다.',
     }
 ]
 

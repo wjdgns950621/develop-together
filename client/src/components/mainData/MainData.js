@@ -5,8 +5,9 @@ function MainData({username, content}) {
     return (
         <div className={styles.component}>
             <div className={styles.data}>
-                <span className={styles.username}>{username} : </span>
-                <span className={styles.content}>{content}</span>
+                <span className={styles.username}>{username}</span>
+                <div className={styles.line}></div>
+                <div className={styles.content}>{content}</div>
             </div>
         </div>
     )

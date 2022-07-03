@@ -1,0 +1,78 @@
+.logo {
+  height: 20rem;
+  display: block;
+  margin: 0px auto;
+  margin-top: -5rem;
+}
+
+.login {
+  margin-top: -5rem;
+  border: 1px solid black;
+  height: 23rem;
+  position: relative;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  border-radius: 30px;
+}
+
+.id {
+  height: 50px;
+  margin-left: 2rem;
+  margin-top: 10px;
+}
+
+.password {
+  height: 50px;
+  margin-left: 2rem;
+}
+
+.user__Id {
+  width: 60%;
+  margin-left: 1rem;
+  outline: 0;
+  margin-top: 1rem;
+  height: 2rem;
+  border-radius: 12px;
+}
+
+.user__password {
+  width: 60%;
+  margin-left: 1rem;
+  outline: 0;
+  margin-top: 1rem;
+  height: 2rem;
+  border-radius: 12px;
+}
+
+.userInfo {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  margin-left: -3rem;
+}
+
+.btn {
+  margin: auto;
+  display: block;
+  width: 30%;
+  height: 60px;
+  box-sizing: border-box;
+  background-color: #f4ffff;
+  color: black;
+  font-size: 23px;
+  font-weight: bold;
+  border-radius: 12px;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.signup {
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+}

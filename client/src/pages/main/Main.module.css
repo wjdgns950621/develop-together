@@ -1,5 +1,71 @@
 .introduce {
+  background-color: #f4ffff;
+  height: 32rem;
+  margin-top: -5rem;
+  position: relative;
+}
+
+.data {
+  display: flex;
+  margin-left: 4rem;
+}
+
+.comment {
+  text-align: center;
+  padding: 5rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.start {
+  width: auto;
+  margin: auto;
+  display: block;
+  background-color: #f4ffff;
+  border: 0;
+  cursor: pointer;
+  font-size: 30px;
+  text-shadow: 1px 1px 0px #32f1ff;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.pic1 {
+  object-fit: cover;
+  height: 40rem;
+  width: 100%;
+}
+
+.picture {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.pic {
   display: flex;
   justify-content: space-between;
-  margin-right: 5rem;
+  padding: 50px 50px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.pic__ment {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }

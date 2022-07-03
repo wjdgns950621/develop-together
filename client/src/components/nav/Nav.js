@@ -10,7 +10,7 @@ function Nav() {
         history.push('/login')
     }
     function signupBtn() {
-        history.push('/singup')
+        history.push('/signup')
     }
 
     return (

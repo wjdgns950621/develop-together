@@ -1,19 +1,25 @@
 const express = require('express');
+const cors = require('cors');
+const connect = require('./schemas');
+
 const app = express();
 
+connect();
 
-app.use(
-    cors({
-        origin: 'http://localhost:8080',
-        credentials: true,
-        methods: ['GET', 'POST', 'PUT', "DELETE"],
-    })
-);
+const corsOptions = {
+    origin: true,
+    credentials: true,
+};
 
-app.listen(8080, function() {
-    console.log('hi nodemon')
-})
+app.use(cors(corsOptions));
 
-app.get('login', function(req,res) {
-    res.send('asd')
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
+// app.use('/users', userRouter);
+// app.use('/posts', postRouter);
+
+app.listen(8080, () => {
+    console.log('연결완료')
 })

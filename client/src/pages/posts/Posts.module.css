@@ -9,7 +9,7 @@
   display: block;
   margin: auto;
   position: relative;
-  margin-top: -6rem;
+  margin-top: -7rem;
   width: 20%;
   height: 40px;
   border-radius: 12px;
@@ -20,7 +20,7 @@
 
 .line {
   width: 100%;
-  border: 1px solid black;
+  border: 0.5px solid black;
   margin-top: 2rem;
   position: relative;
 }

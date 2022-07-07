@@ -24,6 +24,7 @@
   margin-top: 1rem;
   height: 2rem;
   border-radius: 12px;
+  text-align: center;
 }
 
 .user {
@@ -47,4 +48,13 @@
 
 .btn {
   text-align: center;
+}
+
+.msg {
+  color: red;
+}
+
+.phone {
+  font-weight: lighter;
+  font-size: 12px;
 }

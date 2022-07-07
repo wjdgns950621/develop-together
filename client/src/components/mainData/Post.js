@@ -1,8 +1,11 @@
 import React from "react";
 import styles from './Post.module.css';
 
-function Post() {
+
+function Post({userInfo}) {
     const parseDate = new Date().toLocaleDateString('ko-kr');
+  
+    
 
     return (
         <div className={styles.component}>

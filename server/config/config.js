@@ -1,4 +1,4 @@
-const dotenv = require('dotenv');
+import dotenv from 'dotenv'
 dotenv.config();
 
 function required(key, defaultValue = undefined) {
@@ -9,13 +9,21 @@ function required(key, defaultValue = undefined) {
     return value;
 }
 
-const config = {
+export const config = {
     db: {
         host: required('DB_HOST'),
     },
     host: {
         port: parseInt(required('HOST_PORT', 8080))
-    }
-}
+    },
+    bcrypt: {
+        saltRounds: parseInt(required('BCRYPT_SALT_ROUNDS', 12))
+    },
+    jwt: {
+        access_secret: required('JWT_ACCESS_SECRET'),
+        refresh_secret: required('JWT_REFRESH_SECRET'),
+        access_expiresInSec: required('JWT_ACCESS_EXPIRES'),
+        refresh_expiresInSec: required('JWT_REFRESH_EXPIRES'),
+    },
+};
 
-module.exports = config

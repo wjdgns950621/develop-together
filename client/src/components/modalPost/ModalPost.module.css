@@ -1,0 +1,24 @@
+.modal {
+    flex: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #00000080;
+    z-index: 10000;
+}
+
+.modalContainer {
+    position: absolute;
+    text-align: center;
+    width: 375px;
+    height: 620px;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.border {
+}

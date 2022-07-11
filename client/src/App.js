@@ -15,6 +15,7 @@ function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
   
+  
   useEffect(() => {
     axios.get('http://localhost:8080/auth/refresh', {
       headers: {'Content-Type': 'application/json'},
@@ -30,7 +31,7 @@ function App() {
   return (
     <>
       <Route exact path="/">
-        <Main />
+        <Main userInfo={userInfo}/>
       </Route>
       <Route path="/login">
         <Login />

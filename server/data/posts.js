@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { userVirtualId } from "../database/database.js";
 
-const Schema = mongoose.Schema;
+
 
 const postSchema = new mongoose.Schema(
     {
@@ -9,18 +9,21 @@ const postSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        author: {
-            type: Schema.Types.ObjectId, ref: 'User'
-        },
-        member: {
-            type: Number,
+        userId: {
+            type: String,
             required: true,
         },
-        totalmember: {
-            type: Number,
-            require: true,
+        phone: {
+            type: String,
+            required: true,
         },
-    }
+        name: {
+            type: String,
+            required: true,
+        },
+        
+    },
+    { timestamps: true}
 )
 
 userVirtualId(postSchema);
@@ -29,11 +32,23 @@ const Post = mongoose.model('Post', postSchema);
 
 
 
-export async function create(text, name, member, totalmember) {
+export async function create(text, userId, phone, name) {
     return new Post({
         text,
-        member,
-        totalmember,
-        author: name,
+        userId,
+        phone,
+        name,
     }).save();
+}
+
+export async function getByPosts() {
+    return await Post.find().sort({ createdAt: -1 });
+}
+
+export async function getById(id) {
+    return Post.findById(id);
+}
+
+export async function remove(id) {
+    return Post.findByIdAndDelete(id);
 }

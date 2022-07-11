@@ -1,9 +1,8 @@
 .component {
-  width: 16%;
-  height: 150px;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  height: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border-width: 1.5px;
   font-size: 15px;
   border: 2px solid black;
@@ -28,6 +27,7 @@
 
 .line {
   border: 0.5px solid black;
+  margin-top: 2px;
 }
 
 .line2 {
@@ -36,28 +36,19 @@
 }
 
 .createdAt {
-  float: right;
   font-size: 12px;
   margin-top: 0.4rem;
+  margin-left: 0.6rem;
 }
 
-.member {
-  font-size: 12px;
-  padding: 2px 10px;
-  margin-left: -0.5rem;
-}
-
-.join {
-  border-radius: 12px;
-  background-color: #f4ffff;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.cancle {
-  border-radius: 12px;
-  background-color: #f4ffff;
-  cursor: pointer;
-  font-weight: bold;
+.trash {
   float: right;
+  padding: 4px 4px;
+  background-color: white;
+  border:  0;
+  cursor: pointer;
+}
+
+.phone {
+  font-size: smaller;
 }

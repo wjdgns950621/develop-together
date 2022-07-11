@@ -4,6 +4,7 @@ import { config } from '../config/config.js';
 import jwt from 'jsonwebtoken';
 
 
+
 export async function signup(req, res) {
     const { userId, password, name, phone } = req.body;
     const found = await usersRepository.findByUserId(userId);
@@ -23,7 +24,6 @@ export async function signup(req, res) {
 
 export async function signin(req, res) {
     const { userId, password } = req.body;
-    
     const user = await usersRepository.findByUserId(userId);
     
     if(!user) {
@@ -49,7 +49,7 @@ export async function signin(req, res) {
 export async function refresh(req, res) {
     const refreshToken = req.cookies.refreshToken;
     if (!refreshToken) {
-        return res.json({ data: null, message: ' refresh token not provided ' });
+        return res.json(null);
         }
 
     try {
@@ -67,6 +67,7 @@ export async function refresh(req, res) {
         accessToken,
         userId: found.userId,
         phone: found.phone,
+        name: found.name,
         message: ' complete access token issuance ',
         });
         } catch (error) {
@@ -80,4 +81,16 @@ export async function refresh(req, res) {
         }
         next(error);
     }
+}
+
+export async function signout(req, res) {
+    const Token = req.cookies.refreshToken;
+    
+    if(!Token) {
+        return res.status(401).json({ message: 'Unauthorized'});
+    }
+    res
+    .clearCookie('refreshToken')
+    .status(200)
+    .json({ message: 'Logout' });
 }

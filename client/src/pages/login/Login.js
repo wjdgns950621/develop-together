@@ -43,7 +43,7 @@ function Login() {
                 </div>
                 <div className={styles.userInfo}>
                     <FontAwesomeIcon className={styles.password} icon={faLock} />
-                    <input className={styles.user__password} placeholder="비밀번호" ref={passwordRef}></input>
+                    <input className={styles.user__password} placeholder="비밀번호" type='password' ref={passwordRef}></input>
                 </div>
                     <button className={styles.btn} onClick={handleLogin}>로그인</button>
             </div>

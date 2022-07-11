@@ -1,23 +1,39 @@
 import React from "react";
 import styles from './Post.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import axios from "axios";
 
 
-function Post({userInfo}) {
-    const parseDate = new Date().toLocaleDateString('ko-kr');
-  
+function Post({post, userInfo}) {
+    const parseDate = new Date(post.createdAt).toLocaleDateString('ko-kr');
+    const phoneNumber = post.phone.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`)
+    
+    function handleDelete() {
+        axios.delete(`http://localhost:8080/posts/${post._id}`)
+            .then(() => {
+                alert('삭제 완료하였습니다.')
+                window.location.replace('/posts')
+            })
+            .catch((err) => console.log(err))
+    }
     
 
     return (
         <div className={styles.component}>
             <div className={styles.data}>
-                <span className={styles.username}>김정훈</span>
+                <span className={styles.username}>{post.name}</span>
                 <span className={styles.createdAt}>{parseDate}</span>
+                {post.userId === userInfo.userId ?
+                <button className={styles.trash} onClick={handleDelete}>
+                <FontAwesomeIcon icon={faTrash} />
+                </button> : null}
                 <div className={styles.line}></div>
-                <div className={styles.content}>ㅁㄴ라ㅓㅠㅁ나ㅓㅠ라ㅓㅠㅁ나ㅓ뉴륨나ㅠㄴ마류ㅓㅏㅁㄴ</div>
-                <div className={styles.member}>현재인원 : / </div>
+                <div>
+                <div className={styles.content}>{post.text}</div>
+                </div>
                 <div className={styles.line2}></div>
-                <button className={styles.join}>참여</button>
-                <button className={styles.cancle}>취소</button>
+                <div className={styles.phone}>휴대전화 : {phoneNumber}</div>
             </div>
         </div>
     )

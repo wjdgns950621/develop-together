@@ -7,18 +7,28 @@ import pic1 from '../../img/pic1.jpeg'
 import pic2 from '../../img/pic2.jpeg'
 import pic3 from '../../img/pic3.jpeg'
 import pic4 from '../../img/pic4.jpeg'
+import {useHistory} from 'react-router-dom';
 
+function Main({userInfo}) {
+    const history = useHistory();
 
-function Main() {
+    function handleGo() {
+        if(userInfo){
+            history.push('/posts')
+        }else {
+            history.push('/login')
+        }
+    }
+
     return (
         <div className={styles.main}>
-            <Nav />
+            <Nav userInfo={userInfo}/>
             <div className={styles.introduce}>
                 <div className={styles.data}>
-                    {dummyDatas.map((el) => (<MainData username={el.username} content={el.content} />))}
+                    {dummyDatas.map((el) => (<MainData username={el.username} content={el.content}  key={el.id} />))}
                 </div>
                 <div className={styles.comment}>프로젝트를 같이 할 동료가 필요할떄 !</div>
-                <button className={styles.start}>develop-together 시작하기</button>
+                <button className={styles.start} onClick={handleGo}>develop-together 시작하기</button>
             </div>
             <div className={styles.picture}>
                 <div className={styles.text}>개발자를 위한 공간,  develop-together</div>
@@ -40,9 +50,6 @@ function Main() {
                     </div>
                 </div>
                 <div className={styles.ment}>
-                    
-                    
-                    
                 </div>
             </div>
         </div>
